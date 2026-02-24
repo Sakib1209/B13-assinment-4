@@ -1,0 +1,21 @@
+1{ 1. getElementById() returns single element only and select id only
+   2. getElementsByClassName() returns HTMLCollection and select class only
+   3. querySelector() returns 1st matching elements and select any valid class
+   4. querySelectorAll() returns nodelist 
+}
+
+2.//Create an element
+const div = document.createElement("div");
+
+//add text
+div.textContent = "Hello World";
+
+// insert into DOM  
+const parent = document.querySelector("#container");
+parent.append(div);
+
+3.when an event starts at the target element and then propagates upward through its ancestors.
+
+4.Event Delegation is a pattern in JavaScript where you attach a single event listener to a parent element to manage events for all of its current and future child elements. Yes it's helpfull. It's improved performance & memory.
+
+5. preventDefault() stops Default Behavior and stopPropagation() stops bubbling.
