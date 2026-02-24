@@ -1,17 +1,53 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Job Tracker</title>
-    <style type="text/tailwindcss">
-      @theme {
-        --color-clifford: #da373d;
-      }
-    </style>
-  </head>
-  <body class="bg-gray-100 p-6">
+
+</head>
+
+<body class="bg-gray-100 p-6">
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Job Application Tracker</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+
+            <div class="bg-white p-6 rounded-xl shadow">
+                <p class="text-gray-500 text-sm">Total Jobs</p>
+                <h2 id="totalJobs" class="text-3xl font-bold mt-2">0</h2>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow">
+                <p class="text-gray-500 text-sm">Interview</p>
+                <h2 id="interviewJobs" class="text-3xl font-bold text-green-600 mt-2">0</h2>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow">
+                <p class="text-gray-500 text-sm">Rejected</p>
+                <h2 id="rejectedJobs" class="text-3xl font-bold text-red-600 mt-2">0</h2>
+            </div>
+
+        </div>
+        <h2 class="text-2xl font-semibold mb-4">Available Jobs</h2>
+        <div class="flex gap-4 mb-8">
+            <button onclick="changeTab('all', this)" class="tabBtn bg-blue-600 text-white px-4 py-2 rounded-lg">
+                All
+            </button>
+
+            <button onclick="changeTab('interview', this)" class="tabBtn bg-white border px-4 py-2 rounded-lg">
+                Interview
+            </button>
+            <button onclick="changeTab('rejected', this)" class="tabBtn bg-white border px-4 py-2 rounded-lg">
+                Rejected
+            </button>
+        </div>
+
+        <div id="jobContainer" class="space-y-6"></div>
+
+    </div>
     
-  </body>
+</body>
+
 </html>
